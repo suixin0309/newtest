@@ -1,0 +1,17 @@
+
+a, a:hover {
+  color: #fff;
+}
+.ant-menu-dark .ant-menu-submenu-selected {
+  background-color: #1890ff !important;
+  color: #fff;
+}
+.ant-menu-vertical .ant-menu-submenu-selected {
+  color: white !important;
+}
+.ant-menu-submenu-active {
+  color: #fff !important;
+}
+.ant-table a {
+  color: #666 !important;
+}

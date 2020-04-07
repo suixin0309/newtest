@@ -1,0 +1,41 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+import HelloWorld from "@/components/HelloWorld";
+import Home from "../views/Home";
+import NavComponent from "../components/NavComponent";
+import DataStandard from "../views/DataStandard";
+import DataDistribution from "../views/DataDistribution";
+import AddStandard from "../views/AddStandard";
+import EditStandard from "../views/EditStandard";
+import DataQuality from "../views/DataQuality";
+
+Vue.use(Router)
+
+export default new Router({
+  routes: [
+    {
+      path: '/h',
+      name: 'HelloWorld',
+      component: HelloWorld,
+      meta:{
+        requiresAuth:true,
+        auth:false
+      }
+    }
+  ]
+})
+
+export const DynamicRouter = [
+  {
+    path: '/nav',
+    component: NavComponent,
+    name: 'NavComponent',
+    meta: {
+      requiresAuth: true,
+      name: '首页'
+    },
+    children: [
+
+    ]
+  }
+]

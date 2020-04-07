@@ -1,0 +1,49 @@
+<template>
+  <div class="hello">
+    <h2>数据分发页</h2>
+  </div>
+</template>
+
+<script>
+
+  import {mapGetters, mapState} from "vuex";
+
+export default {
+  name: 'DataDistribution',
+  props: ['msg'],
+  data () {
+    return {
+      age:''
+    }
+  },
+  beforeMount() {
+    this.$request.get(this.apiUri.taobao,{
+      'code':'utf-8',
+        'q':'%E5%8D%AB%E8%A1%A3',
+      'callback':'cb'
+    },'taobao').then(res=>{
+    })
+  },
+  computed:mapGetters({
+      status:'getNavStatus'
+    })
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+h1, h2 {
+  font-weight: normal;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+</style>
